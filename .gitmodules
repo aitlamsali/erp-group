@@ -1,0 +1,4 @@
+[submodule "dkgroup-organization/erp-group/project_tag"]
+	path = dkgroup-organization/erp-group/project_tag
+	url = git@github.com:dkgroup-organization/erp-group.git
+	branch = master

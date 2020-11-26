@@ -2,3 +2,8 @@
 	path = dkgroup-organization/erp-group/project_tag
 	url = git@github.com:dkgroup-organization/erp-group.git
 	branch = master
+
+[submodule "abdelghani-khalidi/public/project_liaison"]
+	path = abdelghani-khalidi/public/project_liaison
+	url = git@github.com:abdelghani-khalidi/public.git
+	branch = master

@@ -1,0 +1,38 @@
+<!-- Copyright 2019 Patrick Wilson <patrickraymondwilson@gmail.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+    <!-- List View-->
+    <record model="ir.ui.view" id="project_main_tag_form_view">
+        <field name="name">Project Tags</field>
+        <field name="model">project.main.tag</field>
+        <field name="arch" type="xml">
+            <form string="Project Tags">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="color"/>
+                        <field name="is_default"/>
+                        <field name="default_company_ids" widget="many2many_tags"/>
+                        <field name="company_id"/>
+                        <field name="project_task_type_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_main_tag_tree_view">
+        <field name="name">Project Main Tag</field>
+        <field name="model">project.main.tag</field>
+        <field name="arch" type="xml">
+            <tree string="Tags" > <!--editable="bottom"-->
+                <field name="name"/>
+                <field name="color"/>
+                <field name="is_default"/>
+                <field name="default_company_ids" widget="many2many_tags"/>
+                <field name="company_id"/>
+
+            </tree>
+        </field>
+    </record>
+</odoo>

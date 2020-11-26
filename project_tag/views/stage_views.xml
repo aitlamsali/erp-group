@@ -1,0 +1,77 @@
+<!-- Copyright 2019 Patrick Wilson <patrickraymondwilson@gmail.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+    <!-- List View-->
+<!--    <record id="project_tags_view_inherit_list" model="ir.ui.view">-->
+<!--        <field name="name">project.tags.tree</field>-->
+<!--        <field name="model">project.project</field>-->
+<!--        <field name="inherit_id" ref="project.view_project" />-->
+<!--        <field name="type">tree</field>-->
+<!--        <field name="field_parent">child_ids</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <field name="partner_id" position="before">-->
+<!--                <field name="project_main_tag_ids" widget="many2many_tags" />-->
+<!--            </field>-->
+<!--        </field>-->
+<!--    </record>-->
+    <!-- Form View -->
+    <record id="task_type_edit_view_inherit_form" model="ir.ui.view">
+        <field name="name">project.task.form</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='mail_template_id']" position="after">
+                <field
+                    name="project_main_tag_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"
+                />
+                <field name="company_id" />
+            </xpath>
+
+        </field>
+    </record>
+<!--    &lt;!&ndash; Simplified Form View &ndash;&gt;-->
+<!--    <record id="project_tags_view_inherit_simple" model="ir.ui.view">-->
+<!--        <field name="name">project.tags.simpleform</field>-->
+<!--        <field name="model">project.project</field>-->
+<!--        <field name="inherit_id" ref="project.project_project_view_form_simplified" />-->
+<!--        <field name="type">form</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <field name="name" position="after">-->
+<!--                <field-->
+<!--                    name="project_main_tag_ids"-->
+<!--                    widget="many2many_tags"-->
+<!--                    options="{'color_field': 'color'}"-->
+<!--                />-->
+<!--            </field>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--    &lt;!&ndash; Kanban View &ndash;&gt;-->
+<!--    <record id="project_tags_view_inherit_kanban" model="ir.ui.view">-->
+<!--        <field name="name">project.tags.kanban</field>-->
+<!--        <field name="model">project.project</field>-->
+<!--        <field name="inherit_id" ref="project.view_project_kanban" />-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//div[hasclass('o_primary')]" position="after">-->
+<!--                <field-->
+<!--                    name="project_main_tag_ids"-->
+<!--                    widget="many2many_tags"-->
+<!--                    options="{'color_field': 'color'}"-->
+<!--                />-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--    &lt;!&ndash; Search view &ndash;&gt;-->
+<!--    <record id="view_project_project_filter" model="ir.ui.view">-->
+<!--        <field name="name">project.tags.search</field>-->
+<!--        <field name="model">project.project</field>-->
+<!--        <field name="inherit_id" ref="project.view_project_project_filter" />-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//field[@name='partner_id']" position="after">-->
+<!--                <field name="project_main_tag_ids" />-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+</odoo>

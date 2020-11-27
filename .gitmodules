@@ -7,3 +7,8 @@
 	path = abdelghani-khalidi/public/project_liaison
 	url = git@github.com:abdelghani-khalidi/public.git
 	branch = master
+
+[submodule "abdelghani-khalidi/public/project_tag_2"]
+	path = abdelghani-khalidi/public/project_tag_2
+	url = git@github.com:abdelghani-khalidi/public.git
+	branch = master

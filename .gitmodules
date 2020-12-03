@@ -12,3 +12,8 @@
 	path = abdelghani-khalidi/public/project_tag_2
 	url = git@github.com:abdelghani-khalidi/public.git
 	branch = master
+
+[submodule "abdelghani-khalidi/public/pos_orders_all"]
+	path = abdelghani-khalidi/public/pos_orders_all
+	url = git@github.com:abdelghani-khalidi/public.git
+	branch = master
